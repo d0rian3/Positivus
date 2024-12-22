@@ -1,0 +1,151 @@
+footer {
+  background-color: #191a23;
+  border-radius: 45px 45px 0px 0px;
+  padding: 60px;
+  .FooterNav {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    .FooterPosLogo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      img {
+        width: 25px;
+      }
+      h2 {
+        color: white;
+        font-size: 25px;
+        font-weight: 200;
+      }
+    }
+    ul {
+      display: flex;
+      gap: 40px;
+      font-size: 15px;
+      align-items: center;
+      color: white;
+      text-decoration: underline;
+    }
+    .SocialIconsDiv {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+
+  .MainInfoFooter {
+    display: flex;
+    gap: 150px;
+    align-items: center;
+    .ContactInfo {
+      align-items: center;
+
+      margin-top: 65px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      h2 {
+        background-color: #b9ff66;
+        display: inline-block;
+        padding: 3px;
+        font-weight: 400;
+        border-radius: 7px;
+        align-self: flex-start;
+      }
+      span {
+        color: white;
+        align-self: flex-start;
+      }
+    }
+  }
+  .SubscribeForm {
+    background-color: #292a32;
+    border-radius: 14px;
+    padding: 60px 40px;
+    display: flex;
+    align-items: center;
+    margin-top: 65px;
+    gap: 20px;
+    input {
+      border-radius: 14px;
+      border: 1px solid white;
+      padding: 20px 35px;
+      color: white;
+      font-size: 18px;
+    }
+    button {
+      color: #000;
+      background-color: #b9ff66;
+      padding: 20px 35px;
+      border-radius: 14px;
+      font-size: 20px;
+      transition: 0.2s ease;
+      &:hover {
+        transform: scale(0.9);
+        border: 1px solid #b9ff66;
+        background-color: inherit;
+        color: white;
+        cursor: pointer;
+      }
+    }
+  }
+  hr {
+    margin: 50px 0px;
+  }
+  .PrivacySec {
+    display: flex;
+    gap: 40px;
+    color: white;
+    span:last-child {
+      text-decoration: underline;
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .SocialIconsDiv {
+    display: none !important;
+  }
+  .FooterPosLogo {
+    align-self: center;
+    margin-bottom: 10px;
+  }
+  .ListFooter {
+    flex-direction: column;
+    text-decoration: none !important;
+    gap: 10px !important;
+  }
+  .FooterNav {
+    flex-direction: column;
+  }
+  .MainInfoFooter {
+    gap: 0px !important;
+    flex-direction: column;
+  }
+  .ContactInfo {
+    h2 {
+      align-self: center !important;
+    }
+    span {
+      align-self: center !important;
+      text-align: center;
+    }
+  }
+  .SubscribeForm {
+    display: flex;
+    flex-direction: column;
+  }
+  .PrivacySec {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+@media (max-width: 470px) {
+  .SubscribeForm {
+    input,
+    button {
+      width: 150px !important;
+    }
+  }
+}

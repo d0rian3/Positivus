@@ -1,0 +1,99 @@
+header {
+  .PcHeader {
+    display: flex;
+    gap: 100px;
+    margin-bottom: 70px;
+    .DigitalMarketing {
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+      align-items: center;
+
+      h1 {
+        font-size: 60px;
+
+        font-weight: 500;
+      }
+      span {
+        font-size: 20px;
+      }
+      button {
+        padding: 20px 35px;
+        border-radius: 15px;
+        background-color: #191a23;
+        color: #fafafa;
+
+        font-size: 20px;
+        font-weight: 300;
+        align-self: flex-start;
+        transition: 0.2s ease-in;
+        &:hover {
+          cursor: pointer;
+          transform: scale(0.9);
+        }
+      }
+    }
+    .IllustrationPic {
+      img {
+        width: 550px;
+      }
+    }
+  }
+}
+.MobileHeader {
+  display: none;
+}
+@media (max-width: 1300px) {
+  header {
+    article:first-child {
+      display: none;
+    }
+  }
+  .MobileHeader {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 70px;
+    justify-content: center;
+    section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      img {
+        max-width: 550px;
+        margin: 30px 0px;
+        align-self: flex-start;
+      }
+      h1 {
+        font-size: 60px;
+
+        font-weight: 500;
+      }
+      span {
+        font-size: 20px;
+      }
+
+      button {
+        margin-top: 30px;
+        padding: 20px 35px;
+        border-radius: 15px;
+        background-color: #191a23;
+        color: #fafafa;
+        font-size: 20px;
+        font-weight: 300;
+        align-self: flex-start;
+        transition: 0.2s ease-in;
+        &:hover {
+          cursor: pointer;
+          transform: scale(0.9);
+        }
+      }
+    }
+  }
+}
+@media (max-width: 750px) {
+  .MobileHeader {
+    img {
+      width: 300px;
+    }
+  }
+}

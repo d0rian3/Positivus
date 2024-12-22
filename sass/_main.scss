@@ -1,0 +1,540 @@
+.RunningImages {
+  display: flex;
+  overflow: hidden;
+  margin-bottom: 100px;
+  div {
+    animation: running-images 7s linear infinite;
+    display: flex;
+    gap: 95px;
+    img {
+      display: inline-block;
+      filter: grayscale(1);
+    }
+  }
+}
+
+@keyframes running-images {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.ServicesList {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+  button {
+    font-size: 40px;
+    font-weight: 500;
+    background-color: #b9ff66;
+    border-radius: 7px;
+    padding: 5px 7px;
+    cursor: pointer;
+  }
+  span {
+    max-width: 580px;
+
+    font-size: 18px;
+    font-weight: 300;
+  }
+  margin-bottom: 85px;
+}
+// todo ---> 1,4 = white | 2,5 = green | 3,6 = dark
+.CardsList {
+  display: grid;
+  align-items: center;
+
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  flex-wrap: wrap;
+
+  li {
+    display: flex;
+    gap: 70px;
+    padding: 50px;
+    border-radius: 45px;
+    border: 1px solid #191a23;
+    box-shadow: 0px 5px 0px 0px #191a23;
+
+    .LearnMore {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-top: 80px;
+      cursor: pointer;
+    }
+    h3 {
+      display: inline;
+      padding: 3px;
+      font-size: 25px;
+      font-weight: 400;
+    }
+  }
+}
+.CardsList {
+  li:first-child,
+  li:nth-child(4) {
+    background-color: #fafafa;
+    h3 {
+      background-color: #b9ff66;
+    }
+  }
+
+  li:nth-child(2),
+  li:nth-child(5) {
+    background-color: #b9ff66;
+    h3 {
+      background-color: #fafafa;
+    }
+  }
+
+  li:nth-child(3),
+  li:nth-child(6) {
+    background-color: #191a23;
+    h3 {
+      background-color: #fafafa;
+    }
+    span {
+      color: #fafafa;
+    }
+  }
+}
+.CaseStudies {
+  margin-top: 70px;
+  display: flex;
+  background-color: #f3f3f3;
+  border-radius: 45px;
+  padding: 60px;
+  gap: 150px;
+
+  margin-bottom: 70px;
+  justify-content: center;
+  align-items: center;
+  div {
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+      font-size: 30px;
+
+      font-weight: 400;
+    }
+    p {
+      font-size: 20px;
+
+      font-weight: 400;
+      margin: 30px 0px;
+    }
+    button {
+      background-color: #191a23;
+      color: #fafafa;
+      padding: 20px 35px;
+      border-radius: 14px;
+      transition: 0.2s ease;
+      align-self: self-start;
+      &:hover {
+        background-color: #f3f3f3;
+        border: 1px solid #191a23;
+        color: #191a23;
+        transform: scale(0.9);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.CaseStudiesBlocks {
+  background-color: #191a23;
+  border-radius: 45px;
+  padding: 70px 60px;
+  display: flex;
+  gap: 65px;
+  align-items: center;
+  margin-bottom: 70px;
+  hr {
+    width: 1px;
+    height: 170px;
+  }
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    div {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      span {
+        color: #b9ff66;
+      }
+    }
+    span {
+      color: #fafafa;
+    }
+  }
+}
+
+.ArticleWhatWeDo {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  counter-reset: WhatWeDo;
+  margin-bottom: 70px;
+}
+.WhatWeDo {
+  background-color: #f3f3f3;
+  border-radius: 45px;
+  padding: 40px 60px;
+  border: 1px solid #191a23;
+  box-shadow: 0px 5px 0px 0px #191a23;
+  display: flex;
+  align-items: center;
+  &:hover {
+    cursor: pointer;
+  }
+  h3 {
+    font-size: 30px;
+    font-weight: 400;
+    counter-increment: WhatWeDo;
+    white-space: wrap;
+    user-select: none;
+    &::before {
+      content: "0" counter(WhatWeDo);
+      margin-right: 10px;
+      font-weight: 500;
+    }
+  }
+  span {
+    margin-left: auto;
+    font-size: 45px;
+    transition: 250ms ease-in-out;
+    user-select: none;
+  }
+  img {
+    margin-left: auto;
+    transition: 0.2s ease;
+    &:hover {
+      transform: scale(0.9);
+      cursor: pointer;
+    }
+  }
+}
+.WhatWeDoDesc {
+  background-color: #b9ff66;
+  border-radius: 0px 0px 45px 45px;
+  padding: 40px 60px;
+  border: 1px solid #191a23;
+  box-shadow: 0px 5px 0px 0px #191a23;
+  display: flex;
+  align-items: center;
+  margin-top: -30px;
+  display: none;
+}
+.ArticleTeam {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-bottom: 70px;
+  section {
+    display: flex;
+    flex-direction: column;
+    border-radius: 45px;
+    padding: 25px 30px;
+    border: 1px solid #191a23;
+    box-shadow: 0px 5px 0px 0px #191a23;
+    div {
+      display: flex;
+      position: relative;
+      div {
+        display: flex;
+        flex-direction: column;
+        align-self: flex-end;
+        margin-left: 20px;
+        h4 {
+          font-weight: 500;
+        }
+      }
+    }
+    hr {
+      margin: 30px 0px;
+      background-color: #000;
+      border: none;
+      height: 1px;
+    }
+  }
+}
+.LinkedIn {
+  width: 34px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+.ArticleComments {
+  background-color: #191a23;
+  border-radius: 45px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  gap: 50px;
+  padding: 50px 50px 150px 50px;
+  margin-bottom: 70px;
+  section {
+    border: 1px solid #b9ff66;
+    padding: 50px;
+    border-radius: 45px;
+    align-self: center;
+    width: 600px;
+    position: relative;
+
+    span {
+      color: white;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -16px;
+      left: 50px;
+      width: 30px;
+      height: 30px;
+      background-color: #1a1a1a;
+      border-left: 1px solid #b9ff66;
+      border-bottom: 1px solid #b9ff66;
+      transform: rotate(-45deg);
+    }
+    .CommentPerson {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      bottom: -70px;
+      left: 60px;
+
+      h3 {
+        color: #b9ff66;
+        font-size: 15px;
+      }
+      span {
+        font-size: 12px;
+      }
+    }
+  }
+}
+.ArticleForm {
+  display: flex;
+  gap: 220px;
+  padding: 60px 0px 80px 100px;
+  background-color: #f3f3f3;
+  overflow: hidden;
+  border-radius: 45px;
+  margin-bottom: 70px;
+  position: relative;
+  section {
+    form {
+      display: flex;
+      flex-direction: column;
+      font-weight: 200;
+      label {
+        font-size: 18px;
+      }
+      .input_field,
+      .textarea {
+        margin: 10px 0px 30px 0px;
+        font-size: 18px;
+        border: 1px solid black;
+        border-radius: 14px;
+        padding: 18px 30px;
+        background-color: #fafafa;
+        width: 500px;
+      }
+      .textarea {
+        resize: none;
+        height: 190px;
+      }
+    }
+    button {
+      background-color: #191a23;
+      color: #fafafa;
+      padding: 20px;
+      border-radius: 14px;
+      white-space: nowrap;
+      font-size: 15px;
+      font-weight: 200;
+      transition: 0.2s ease;
+      &:hover {
+        cursor: pointer;
+        transform: scale(0.9);
+        border: 1px solid #191a23;
+        background-color: #f3f3f3;
+        color: #191a23;
+      }
+    }
+  }
+  img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin-right: -330px;
+  }
+}
+@media (max-width: 1300px) {
+  .CardsList {
+    grid-template-columns: 1fr;
+
+    li {
+      max-width: 800px;
+    }
+  }
+  .ServicesCards {
+    display: flex;
+    justify-content: center;
+  }
+  .ArticleTeam {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .ArticleForm {
+    img {
+      display: none;
+    }
+  }
+}
+@media (max-width: 1130px) {
+  .CaseStudies {
+    img {
+      display: none;
+    }
+  }
+  .CaseStudiesBlocks {
+    section:first-child {
+      display: none;
+    }
+    .hr {
+      display: none;
+    }
+  }
+  .ArticleComments {
+    section:first-child {
+      display: none;
+    }
+  }
+}
+@media (max-width: 950px) {
+  .CaseStudiesBlocks {
+    section:last-child {
+      display: none;
+    }
+    hr {
+      display: none;
+    }
+  }
+  .ContactUsForm {
+    form {
+      .input_field,
+      .textarea {
+        width: 400px !important;
+      }
+    }
+  }
+}
+@media (max-width: 800px) {
+  .ArticleTeam {
+    grid-template-columns: 1fr;
+  }
+  .ArticleComments {
+    font-size: 1rem;
+  }
+  .ServicesList {
+    flex-direction: column;
+    span {
+      text-align: center;
+    }
+  }
+  .WhatWeDo {
+    h3 {
+      font-size: 25px;
+    }
+  }
+  .ContactUsForm {
+    form {
+      .input_field,
+      .textarea {
+        width: 300px !important;
+      }
+    }
+  }
+}
+@media (max-width: 630px) {
+  .WhatWeDo {
+    h3 {
+      font-size: 20px;
+    }
+    img {
+      width: 35px;
+    }
+  }
+  body {
+    margin: 0px 30px;
+  }
+}
+@media (max-width: 545px) {
+  .CardsList {
+    li {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      .CardSearch {
+        .LearnMore {
+          margin-top: 20px;
+        }
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+  .ContactUsForm {
+    form {
+      .input_field,
+      .textarea {
+        width: 200px !important;
+      }
+    }
+  }
+}
+// CardSearch
+@media (max-width: 400px) {
+  .ArticleComments {
+    section {
+      padding: 15px;
+      span {
+        font-size: 10px;
+      }
+      .CommentPerson {
+        bottom: -85px;
+      }
+    }
+  }
+  .WhatWeDo {
+    h3 {
+      font-size: 15px;
+    }
+  }
+  .ContactUsForm {
+    padding: 0;
+    margin-left: -50px;
+    form {
+      .input_field,
+      .textarea {
+        width: 150px !important;
+      }
+    }
+  }
+}
+@media (max-width: 330px) {
+  .CommentPerson {
+    bottom: -90px !important;
+  }
+}
